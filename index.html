@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f1ed" />
+  <meta name="description" content="Mark & Marina — The Celebration Continues. Join us on 10 October 2026 at 10:00 PM at Padrino, Sheraton, Cairo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mark & Marina — The Celebration Continues" />
+  <meta property="og:description" content="We said ‘I do’… now let’s continue the celebration. 10 October 2026 · 10:00 PM · Padrino." />
+  <meta property="og:image" content="/assets/og/mark-marina-invitation.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <title>Mark & Marina — The Celebration Continues</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="opening" class="opening">
+    <button class="envelope" id="openInvitation" aria-label="Open invitation">
+      <span class="envelope-flap"></span><span class="seal">M ♡ M</span>
+    </button>
+    <p data-i18n="tapOpen">Tap to open our invitation</p>
+  </div>
+
+  <header class="nav">
+    <a href="#home" class="monogram">M ♡ M</a>
+    <nav><a href="#details" data-i18n="details">Details</a><a href="#venue" data-i18n="location">Location</a><a href="#rsvp">RSVP</a></nav>
+    <button id="langToggle" class="lang">EN | عربي</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero floral-section">
+      <div class="hero-card reveal">
+        <p class="eyebrow" data-i18n="title">THE CELEBRATION CONTINUES</p>
+        <h1><span>Mark</span> <em>&</em> <span>Marina</span></h1>
+        <p class="tagline" data-i18n="tagline">Same love · Different kind of fun</p>
+        <div class="event-line"><span>📅 <b data-i18n="date">Saturday, 10 October 2026</b></span><span>◷ <b>10:00 PM</b></span></div>
+        <a class="primary" href="#rsvp" data-i18n="youreInvited">You're Invited ♡</a>
+      </div>
+      <div class="hero-photo"><img src="assets/couple/church.jpg" alt="Mark and Marina"></div>
+    </section>
+
+    <section id="details" class="section story floral-corners reveal">
+      <div><p class="script" data-i18n="afterWedding">After the wedding…</p><h2 data-i18n="moreCelebration">A Little More About Our Celebration</h2><p data-i18n="story">After the wedding, we'd love for you to join us for a cozy night filled with great food, amazing company, and unforgettable memories at Padrino.</p>
+      <div class="features"><span>🍽️ <b data-i18n="food">Delicious Food</b></span><span>🥂 <b data-i18n="company">Amazing Company</b></span><span>♫ <b data-i18n="vibes">Great Vibes</b></span><span>♡ <b data-i18n="love">Because love deserves an afterparty</b></span></div></div>
+      <div class="photo-stack"><img class="p1" src="assets/couple/yellow.jpg" alt="Mark and Marina"><img class="p2" src="assets/couple/floral.jpg" alt="Mark and Marina"><img class="p3" src="assets/couple/sunset.jpg" alt="Mark and Marina at sunset"></div>
+    </section>
+
+    <section id="venue" class="section venue reveal">
+      <div class="venue-placeholder"><div><strong>Padrino</strong><span>Interior gallery coming soon</span><br><small>Reserved for verified photos from the exact Sheraton Al Matar branch.</small></div></div>
+      <div><p class="script" data-i18n="venueLabel">The Venue</p><h2>Padrino</h2><p data-i18n="sheraton">Sheraton, Cairo, Egypt</p><p class="charge" data-i18n="charge">Minimum charge: 500 EGP per person</p><a class="secondary" href="https://maps.app.goo.gl/Lc6MFg6ijxgEh3Ur9" target="_blank" rel="noopener" data-i18n="maps">Open in Google Maps →</a></div>
+    </section>
+
+    <section id="rsvp" class="section rsvp-wrap reveal">
+      <div class="rsvp-card">
+        <h2>RSVP</h2><p data-i18n="rsvpBy">Kindly let us know by Thursday, 1 October 2026</p>
+        <form id="rsvpForm">
+          <fieldset><legend data-i18n="celebrating">Will you be celebrating with us?</legend><label><input type="radio" name="attending" value="yes" checked> <span data-i18n="yes">Yes, I'll be there</span></label><label><input type="radio" name="attending" value="no"> <span data-i18n="no">Unfortunately, I can't attend</span></label></fieldset>
+          <div class="grid identity-grid">
+            <label><span data-i18n="yourName">Your name</span><input name="name" required maxlength="80" autocomplete="name"></label>
+            <label><span data-i18n="phone">Phone number</span><input name="phone" required inputmode="tel" maxlength="30" autocomplete="tel"></label>
+          </div>
+          <div id="attendingFields">
+            <label class="persons-field"><span data-i18n="persons">Number of persons</span><select name="persons" id="persons"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+            <div id="guestNames" class="guest-grid"></div>
+          </div>
+          <label class="note"><span data-i18n="note">Leave a happy note for Mark & Marina 💜</span><textarea name="note" rows="5" maxlength="1000"></textarea></label>
+          <button class="primary submit" type="submit" data-i18n="submit">Submit RSVP ♡</button>
+          <p id="formStatus" class="status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="closing section reveal"><div class="closing-photo"><img src="assets/couple/sunset.jpg" alt="Mark and Marina at sunset"></div><div><h2 class="script">Mark & Marina</h2><p data-i18n="cantWait">We can't wait to celebrate with you</p><strong>10 · 10 · 2026</strong></div></section>
+  </main>
+
+  <button id="musicToggle" class="music" aria-label="Music">♫</button>
+  <audio id="music" loop preload="none"><!-- Add only licensed/user-provided audio. Example: <source src="assets/music/celebration.mp3" type="audio/mpeg"> --></audio>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>
