@@ -1,0 +1,5 @@
+# Package-manager dependencies
+node_modules/
+
+# Local Codex spreadsheet build artifacts
+.codex-sheets/
