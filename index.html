@@ -62,14 +62,14 @@
         <form id="rsvpForm">
           <fieldset><legend data-i18n="celebrating">Will you be celebrating with us?</legend><label><input type="radio" name="attending" value="yes" checked> <span data-i18n="yes">Yes, I'll be there</span></label><label><input type="radio" name="attending" value="no"> <span data-i18n="no">Unfortunately, I can't attend</span></label></fieldset>
           <div class="grid identity-grid">
-            <label><span data-i18n="yourName">Your name</span><input name="name" required maxlength="80" autocomplete="name"></label>
-            <label><span data-i18n="phone">Phone number</span><input name="phone" required inputmode="tel" maxlength="30" autocomplete="tel"></label>
+            <label><span data-i18n="yourName">Your name</span><input name="name" required maxlength="80" autocomplete="name" placeholder="Your full name"></label>
+            <label><span data-i18n="phone">Phone number</span><input name="phone" required inputmode="numeric" pattern="[0-9]{11}" minlength="11" maxlength="11" autocomplete="tel" placeholder="01XXXXXXXXX"></label>
           </div>
           <div id="attendingFields">
             <label class="persons-field"><span data-i18n="persons">Number of persons</span><select name="persons" id="persons"><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
             <div id="guestNames" class="guest-grid"></div>
           </div>
-          <label class="note"><span data-i18n="note">Leave a happy note for Mark & Marina 💜</span><textarea name="note" rows="5" maxlength="1000"></textarea></label>
+          <label class="note"><span data-i18n="note">Leave a happy note for Mark & Marina 💜</span><textarea name="note" rows="5" maxlength="1000" placeholder="Write your message here (optional)"></textarea></label>
           <button class="primary submit" type="submit" data-i18n="submit">Submit RSVP ♡</button>
           <p id="formStatus" class="status" role="status"></p>
         </form>
